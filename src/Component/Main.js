@@ -29,10 +29,15 @@ const Main=()=>{
      getData();
     
   }
+    function WordChange(e)
+  {
+    setword(e.target.value);
+    setfetchData("");
+  }
     return(
         <>
         <div style={{display:"flex",gap:"2rem",margin:"auto",width:"32rem",marginTop:"4rem"}}>
-      <input type='text' placeholder='Enter word' onChange={(e)=>setword(e.target.value)}
+      <input type='text' placeholder='Start typing any word.' onChange={(e)=>WordChange(e)}
        style={{height:"4rem",width:"25rem", borderTopLeftRadius:"12rem ",paddingLeft:"42px",backgroundColor:"white"}}/>
        <button className='button' 
         onClick={handleSubmit}>Search</button>
